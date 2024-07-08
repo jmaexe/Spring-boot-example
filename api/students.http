@@ -1,0 +1,40 @@
+### find all students
+GET http://localhost:8080/api/students
+
+###find Student by ID
+GET http://localhost:8080/api/students/{{id}}
+
+###add new Student
+POST http://localhost:8080/api/students/add
+Content-Type: application/json
+
+{
+"name": "Andrea",
+"age": 18
+}
+
+###add new invalid Student
+POST http://localhost:8080/api/students/add
+Content-Type: application/json
+
+{
+  "name": "",
+  "age": -18,
+  "id": 30
+}
+
+###delete Student by ID
+DELETE http://localhost:8080/api/students/6
+
+###update Student by ID
+PUT http://localhost:8080/api/students/{{id}}
+
+###add new invalid Student
+PUT http://localhost:8080/api/students/32
+Content-Type: application/json
+
+{
+  "name": "",
+  "age": -18,
+  "id": 32
+}
